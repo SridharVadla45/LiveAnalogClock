@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\Documents\\javascript"
+		},
+		{
+			"path": "..\\..\\images"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\html practice"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "projectclock"
+	}
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clock</title>
+  <link rel="stylesheet" href="clock.css">
+</head>
+<body>
+  <div class="container">
+    <button id="btn">Dark mode</button>
+    <div class="clock-container">
+      
+      <div class="hours"></div>
+      <div class=" minutes"></div>
+      <div class=" seconds"></div>
+      <div id="dot"></div>
+
+
+    </div>
+
+    <div class="digital-container">
+      <div class="timing">12:00</div>
+      <div class="day">monday</div>
+      <div class="month"></div>
+    </div>
+
+
+  </div>
+  <script>
+    
+    const hours=document.querySelector('.hours')
+    const min=document.querySelector('.minutes')
+    const sec=document.querySelector('.seconds')
+
+    const butt=document.getElementById('btn')
+    const timing=document.querySelector('.timing')
+    const days=document.querySelector('.day')
+    const monn=document.querySelector('.month')
+    // const h =document.querySelector('html')
+
+ 
+   
+function update(){
+  let time=new Date()
+  
+  let hour=time.getHours();
+    let hour12=hour%12
+    let minutes=time.getMinutes();
+    let seconds=time.getSeconds();
+    let day=time.getDay();
+    let month=time.getMonth();
+
+    let m=minutes*6
+    let h=hour12*30
+    let s=seconds*6
+    timing.innerHTML=hour12
+    days.innerHTML=minutes
+    monn.innerHTML=seconds
+   
+    
+  
+
+  hours.style.transform = `translate(-50%,0%) rotate(${h}deg)`
+    min.style.transform = `translate(-50%,0%) rotate(${m}deg)`
+    sec.style.transform = `translate(-50%,0%) rotate(${s}deg)`
+}
+update()
+
+setInterval(update,1000)
+
+
+  </script>
+  
+</body>
+</html>
